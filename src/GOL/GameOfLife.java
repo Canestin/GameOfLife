@@ -7,6 +7,11 @@ public class GameOfLife {
     public int[][] grid;
 
     public GameOfLife(int rowCount, int columnCount, Coord[] coords) {
+
+        if (rowCount <= 1 || columnCount <= 1) {
+            throw new IllegalArgumentException("Le nombre de lignes et de colonnes doit être supérieur à 1 !");
+        }
+
         this.rowCount = rowCount;
         this.columnCount = columnCount;
         Init();

@@ -6,7 +6,9 @@ public class Main {
 
     public static Coord[] InitialAliveCells(){
         Coord[] coords = new Coord[] {
-                new Coord(0,0)
+                new Coord(3,2),
+                new Coord(3,3),
+                new Coord(3,4),
         };
 
         return coords;
@@ -14,7 +16,7 @@ public class Main {
 
     public static void main(String[] args) {
         Coord[] initialCells = InitialAliveCells();
-        GameOfLife gol = new GameOfLife(0, 0, initialCells);
+        GameOfLife gol = new GameOfLife(5, 5, initialCells);
         gol.ComputeNthGeneration(10);
     }
 }

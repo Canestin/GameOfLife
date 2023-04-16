@@ -11,16 +11,14 @@ public class GameOfLifeTest {
     @Test
     void testConstructorInvalidArguments() {
         Coord[] coords = {new Coord(0, 0)};
-        assertThrows(ArrayIndexOutOfBoundsException.class, () -> new GameOfLife(0, 0, coords));
-        assertThrows(NegativeArraySizeException.class, () -> new GameOfLife(-1, 0, coords));
-        assertThrows(NegativeArraySizeException.class, () -> new GameOfLife(0, -1, coords));
-        assertThrows(NegativeArraySizeException.class, () -> new GameOfLife(-1, -1, coords));
+        assertThrows(IllegalArgumentException.class, () -> new GameOfLife(-1, 1, coords));
+        assertThrows(IllegalArgumentException.class, () -> new GameOfLife(0, 0, coords));
     }
 
     @Test
     void testCoordsInvalidArguments() {
         Coord[] coords = {new Coord(-1, 0)};
-        assertThrows(ArrayIndexOutOfBoundsException.class, () -> new GameOfLife(1, 1, coords));
+        assertThrows(ArrayIndexOutOfBoundsException.class, () -> new GameOfLife(4, 3, coords));
     }
 
     @Test
