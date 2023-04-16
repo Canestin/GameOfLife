@@ -2,10 +2,8 @@ package GOL;
 import java.util.Arrays;
 
 public class GameOfLife {
-
     private int rowCount;
     private int columnCount;
-
     public int[][] grid;
 
     public GameOfLife(int rowCount, int columnCount, Coord[] coords) {
@@ -21,11 +19,11 @@ public class GameOfLife {
     public void PrintGrid(){
         for(int i = 0; i < rowCount; i++){
             for(int j = 0; j < columnCount; j++) {
-                System.out.print(grid[i][j] + " ");
+                System.out.print(grid[i][j] + "  ");
             }
-            System.out.println("");
+            System.out.println();
         }
-        System.out.println("");
+        System.out.println();
     }
 
     /**
